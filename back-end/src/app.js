@@ -1,34 +1,36 @@
 const { response, request } = require('express');
+const SerialPort = require('serialport');
 
-
-function iniciar(pathPortaUSB) {
+function iniciarPortas(pathPortaUSB, portaLocalHost = 3333, delimitadorString = '\n') {
+  
+  const port = new SerialPort(pathPortaUSB);
+  const Delimiter = require('@serialport/parser-delimiter');
+  
   const app = require('express')();
-  const cors = require('cors')
-  const SerialPort = require('serialport');
-  const localPort = 3333;
-  const port = new SerialPort(pathPortaUSB)
-  const Delimiter = require('@serialport/parser-delimiter')
-  let valorAEnviar = 0;
+  const cors = require('cors');
+  
+  const localPort = portaLocalHost;
+  let valorAEnviar = '';
 
-  // SerialPort.list().then(console.log)
-  const parser = port.pipe(new Delimiter({ delimiter: '\n' }))
+  const parser = port.pipe(new Delimiter({ delimiter: delimitadorString }))
   parser.on('data', data => valorAEnviar = data.toString())
   
-
-  app.use(cors())
-
-  app.get('/teste', (request, response) => {
-    const obj = {
-      message: 'acessando normal',
-    }
-    return response.json(obj)
+  app.get('/api-online', (request, response) => {
+    return response.json({ 
+      response: 'true',
+      JSON: 'JavaScript Object Notation',
+    });
   })
 
-  app.get('/teste-api', (request, response) => {
-    return response.json({ nome: 'Pedro', altura: valorAEnviar})
+  app.get('/teste-api', cors(), (request, response) => {
+    return response.json({ nome: 'Pedro', altura: valorAEnviar, });
   })
 
-  app.listen(localPort, () => console.log(`Rodando na porta ${localPort}`))
+  app.listen(localPort, () => console.log(`Rodando na porta ${portaLocalHost}`))
 }
 
-module.exports = { iniciar }
+function listarPortas() {
+  SerialPort.list().then(console.log)
+}
+
+module.exports = { iniciarPortas, listarPortas }
