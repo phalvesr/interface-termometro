@@ -1,6 +1,6 @@
 ### O que eu preciso para rodar?
 
-Primeiramente é necessário ter o nodejs instalado
+Primeiramente é necessário ter o nodejs instalado e um navegador web. A variação da interface é feita através de um dado enviado pela serial do computador do usuário. 
 
 ### Como Instalar o NodeJS? 
 
