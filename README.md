@@ -1,6 +1,10 @@
 ### O que eu preciso para rodar?
 
-Primeiramente é necessário ter o nodejs instalado e um navegador web. A variação da interface é feita através de um dado enviado pela serial do computador do usuário. 
+Primeiramente é necessário ter o nodejs instalado e um navegador web. A variação da interface é feita através de um dado enviado pela serial do computador do usuário, então você provavelmente precisará de algo capaz de gerar esse sinal (um arduino no caso deste projeto). Todos os arquivos deste repositório podem ser clonados para a sua máquina!
+
+### Como clonar este repositório?
+
+
 
 ### Como Instalar o NodeJS? 
 
