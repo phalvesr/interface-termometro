@@ -4,7 +4,15 @@ Primeiramente é necessário ter o nodejs instalado e um navegador web. A varia�
 
 ### Como clonar este repositório?
 
+Exitem duas formas de clonar este repositório: baixando o git diretamente pelo navegador (não é necessário cadastro no github) e clonando o repositório através do bash de comandos do git (ou o equivalente a um terminal com acesso ao git na sua náquina).
 
+- **Fazendo o download diretamente pelo browser**
+
+Este é o método mais simples para aqueles que não estão tão acostumados com o git. Ao acessar o repositório, certifique-se que você está na branch master, então, basta clicar no botão "code" e depois em "Download ZIP". Simples!
+
+<p align="center">
+  <img src="images/cloning-from-web-browser.gif">
+</p>
 
 ### Como Instalar o NodeJS? 
 
