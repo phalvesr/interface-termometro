@@ -11,7 +11,15 @@ Exitem duas formas de clonar este repositório: baixando o git diretamente pelo 
 Este é o método mais simples para aqueles que não estão tão acostumados com o git. Ao acessar o repositório, certifique-se que você está na branch master, então, basta clicar no botão "code" e depois em "Download ZIP". Simples!
 
 <p align="center">
-  <img src="images/cloning-from-web-browser.gif">
+  <img src="images/cloning-from-wen-browser.gif">
+</p>
+
+- **Clonando pelo terminal**
+
+Se você ja tiver o [git](https://git-scm.com/) intalado na sua máquina, basta abrir seu terminal em uma pasta qualquer e executar o comando "git clone linkDoRepositorio" você consegue o linkDoRepositorio no botão code dentro do repositório no github.
+
+<p align="center">
+  <img src="images/cloning-from-terminal.gif">
 </p>
 
 ### Como Instalar o NodeJS? 
